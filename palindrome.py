@@ -1,7 +1,13 @@
 import sys
+
+if len(sys.argv) < 2:
+    print("Please provide a string to check.")
+    print("Usage: python palindrome.py <string>")
+    sys.exit(1)
+
 string = sys.argv[1]
-reverse = string[::-1]
-if string.lower() == reverse.lower():
-    print(string, "is a Palindrome")
+
+if string == string[::-1]:
+    print(f"{string} is a Palindrome")
 else:
-    print(string, " is not a Palindrome")
+    print(f"{string} is not a Palindrome")
